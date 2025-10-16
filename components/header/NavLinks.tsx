@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const NavLinks = () => {
   return (
-    <div>
-      <nav className={'flex gap-5 font-medium'}>
+    <div className=''>
+      <nav className={'hidden md:flex gap-5 font-medium'}>
         {NAV_LINKS.map((link) => (
           <div
             key={link.label}

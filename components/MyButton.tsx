@@ -10,7 +10,7 @@ const newButtonVariants = cva(
     variants: {
       variant: {
         default:
-          'px-8 py-2 bg-my-primary rounded-md group hover:cursor-pointer active:shadow-none shadow-[inset_-2px_-4px_6px_2px_rgba(0,_0,_0,_0.2)] relative transition-all duration-800',
+          'px-8 py-2 bg-my-primary rounded-md group hover:cursor-pointer active:shadow-none shadow-[inset_-2px_-4px_6px_2px_rgba(0,_0,_0,_0.2)] relative transition-all duration-300',
         outline:
           'border bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
         secondary:
@@ -58,9 +58,10 @@ function MyButton({
       <div
         className={
           'absolute inset-0 rounded-md' +
-          ' shadow-[inset_2px_4px_6px_2px_rgba(255,_255,_255,_0.4)] group-active:shadow-none transition-all duration-800'
+          ' shadow-[inset_2px_4px_6px_2px_rgba(255,_255,_255,_0.4)] group-active:shadow-none transition-all duration-200'
         }
       ></div>
+      <div className='absolute inset-0 rounded-md hover:shadow-md hover:shadow-my-blue-200 transition-all duration-300 z-0' />
       {children}
     </Comp>
   )

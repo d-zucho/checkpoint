@@ -15,8 +15,9 @@ h6 {
 @theme inline {
   --color-heading: #262626;
   --color-text: #737373;
+  --color-text-secondary: #525252;
   --color-link: #333333;
-  --color-my-primary: #3b82f6;
+  --color-my-primary: var(--color-my-blue-400);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-title: var(--font-montserrat);
@@ -54,6 +55,26 @@ h6 {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-my-blue-100: #dbeafe;
+  --color-my-blue-150: #bfdbfe;
+  --color-my-blue-200: #89b4fa;
+  --color-my-blue-300: #629bf8;
+  --color-my-blue-400: #3b82f6;
+  --color-my-blue-500: #205ec3;
+  --color-my-blue-600: #234e94;
+  --color-my-blue-700: #133875;
+  --color-my-blue-800: #0d264e;
+  --color-my-blue-900: #061327;
+
+  --color-my-purple-100: #f3e8ff;
+  --color-my-purple-200: #ddd6fe;
+  --color-my-purple-300: #d8b4fe;
+  --color-my-purple-400: #c084fc;
+  --color-my-purple-500: #a855f7;
+  --color-my-purple-600: #9333ea;
+  --color-my-purple-700: #7e22ce;
+  --color-my-purple-800: #6b21a8;
+  --color-my-purple-900: #581c87;
 }
 
 :root {

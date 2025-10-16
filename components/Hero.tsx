@@ -8,13 +8,12 @@ import { MyButton } from './MyButton'
 const Hero = () => {
   return (
     <MaxWidthWrapper>
-      <div className={'mt-28 relative'}>
+      <div className={'mt-28 relative h-screen'}>
         <div>
           <h1
             className={
-              'font-bold font-title! text-6xl text-center' +
-              ' text-heading' +
-              ' leading-20'
+              'font-bold font-title! text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center' +
+              ' text-heading leading-[64px] md:leading-20'
             }
           >
             Get to the{' '}
@@ -40,16 +39,27 @@ const Hero = () => {
             facts.
           </p>
 
-          <div className={'flex justify-center items-center gap-4 mt-10'}>
+          {/* Buttons */}
+          <div
+            className={
+              'pt-6 flex flex-col sm:flex-row justify-center items-center gap-6 mt-10 relative w-fit mx-auto'
+            }
+          >
             <MyButton className='px-8 py-4 font-semibold text-white'>
+              {/* <div className='absolute inset-0 rounded-md hover:shadow-md hover:shadow-my-blue-200 transition-all duration-300' /> */}
               Start Fact-Checking Now!
             </MyButton>
-            <Button
-              variant={'outline'}
-              className='font-semibold text-muted-foreground'
-            >
-              How It Works
-            </Button>
+            <div className='relative group'>
+              <Link href='/'>Learn How It Works</Link>
+              <div className='bg-gradient-to-r from-blue-600 to-violet-600 h-[2.5px] w-0 group-hover:w-full transition-all duration-500 rounded-full' />
+            </div>
+            <Image
+              src={'/svg/DrawnArrow2.svg'}
+              width={200}
+              height={200}
+              alt='arrow'
+              className='absolute -bottom-[100px] -left-20 md:bottom-[-150px] md:-left-40 w-[125px] md:w-[200px] hidden sm:block'
+            />
           </div>
         </div>
 

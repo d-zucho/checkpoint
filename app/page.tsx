@@ -1,12 +1,12 @@
-
-import Hero from "@/components/Hero";
-import Tester from "@/components/Tester";
+import Hero from '@/components/Hero'
+import Stats from '@/components/home/Stats'
+import Tester from '@/components/Tester'
 
 export default function Home() {
   return (
     <div>
-			<Hero />
-			<Tester />
-		</div>
-  );
+      <Hero />
+      <Stats />
+    </div>
+  )
 }
