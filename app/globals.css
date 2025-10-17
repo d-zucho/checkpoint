@@ -14,12 +14,18 @@ h6 {
 
 @theme inline {
   --color-heading: #262626;
-  --color-text: #737373;
-  --color-text-secondary: #525252;
+  --color-heading-secondary: var(
+    --color-gray-700
+  ); /* #404040 as suggested by AI */
+  --color-text-primary: var(--color-gray-600); /* #525252  as suggested by AI */
+  --color-text-secondary: var(
+    --color-gray-500
+  ); /* #737373  as suggested by AI */
   --color-link: #333333;
   --color-my-primary: var(--color-my-blue-400);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-stats: var(--color-violet-600);
   --font-title: var(--font-montserrat);
   --font-body: var(--font-manrope);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -149,3 +155,34 @@ h6 {
 body {
   font-family: var(--font-manrope);
 }
+
+/* 
+in tailwind: --gray-300 in hexcode is #d4d4d4
+in tailwind: --gray-400 in hexcode is #a3a3a3
+in tailwind: --gray-500 in hexcode is #737373
+in tailwind: --gray-600 in hexcode is #525252
+in tailwind: --gray-700 in hexcode is #404040
+in tailwind: --gray-800 in hexcode is #262626
+
+
+most commonly, everyone uses --gray-800 for headings and --gray-500 for text
+
+then for secondary titles, people often use --gray-600
+this in hexcode is #525252 which is my --color-heading-secondary
+and --gray-500 in hexcode is #737373 which is my --color-text
+
+
+Ai suggested grays for primary heading and secondary headings are:
+--color-heading: #262626;
+--color-heading-secondary: #525252;
+--color-text-primary: #525252;
+--color-text-secondary: #737373;
+
+
+Exanples of when to use these colors:
+--color-heading: #262626;  for main headings like h1, h2
+--color-heading-secondary: #525252; for subheadings like h3, h4
+--color-text-primary: #525252; for main body text
+--color-text-secondary: #737373; for secondary text like captions, less important text
+
+*/

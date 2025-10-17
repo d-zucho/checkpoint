@@ -8,19 +8,21 @@ const Stats = () => {
           <h3 className='text-gray-800 text-3xl font-semibold sm:text-4xl'>
             Our customers are always happy
           </h3>
-          <p className='mt-3'>
+          <p className='mt-3 text-text font-medium w-full sm:max-w-[60ch] mx-auto'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             venenatis sollicitudin quam ut tincidunt.
           </p>
         </div>
         <div className='mt-12'>
-          <ul className='flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x'>
+          <ul className='flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x lg:divide-black/50'>
             {STAT_LIST.map((item, idx) => (
               <li key={idx} className='text-center px-12 md:px-16'>
-                <h4 className='text-4xl text-indigo-600 font-semibold'>
+                <h4 className='text-4xl md:text-5xl text-indigo-600 font-black'>
                   {item.data}
                 </h4>
-                <p className='mt-3 font-medium'>{item.title}</p>
+                <p className='mt-3 font-medium text-text-secondary'>
+                  {item.title}
+                </p>
               </li>
             ))}
           </ul>

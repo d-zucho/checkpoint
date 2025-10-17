@@ -32,8 +32,4 @@ export const STAT_LIST: TStat[] = [
     data: '300+',
     title: 'Legislative Updates ',
   },
-  {
-    data: '5,000+',
-    title: 'Active Users',
-  },
 ]

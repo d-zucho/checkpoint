@@ -12,8 +12,8 @@ const Hero = () => {
         <div>
           <h1
             className={
-              'font-bold font-title! text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center' +
-              ' text-heading leading-[64px] md:leading-20'
+              'font-bold font-title! text-[40px] sm:text-6xl md:text-[80px] text-center' +
+              ' text-heading leading-[64px] md:leading-20 tracking-tight'
             }
           >
             Get to the{' '}
@@ -29,9 +29,9 @@ const Hero = () => {
 
           <p
             className={
-              'text-text font-medium text-lg max-w-lg' +
+              'text-text-primary font-medium text-lg max-w-lg' +
               ' text-center' +
-              ' mx-auto pt-4'
+              ' mx-auto pt-4 md:pt-6'
             }
           >
             In an era of misinformation, CheckPoint helps you verify what’s been
@@ -62,24 +62,6 @@ const Hero = () => {
             />
           </div>
         </div>
-
-        {/*<div className={''}>*/}
-        {/*	<h1 className={'font-title! text-5xl xl:text-[80px]' +*/}
-        {/*		' font-bold max-w-lg' +*/}
-        {/*		' lg:max-w-2xl tracking-wide' +*/}
-        {/*		' xl:leading-28 max-sm:text-4xl'}>Find <span>Truth</span> <br />in Political Claims*/}
-        {/*	</h1>*/}
-        {/*</div>*/}
-
-        {/*<div className={' w-fit'}>*/}
-        {/*	<Image*/}
-        {/*		src={'/LieMeter2.png'}*/}
-        {/*		width={400}*/}
-        {/*		height={400}*/}
-        {/*		alt={'Lie Meter'}*/}
-        {/*		className={'shrink-0'}*/}
-        {/*	/>*/}
-        {/*</div>*/}
       </div>
     </MaxWidthWrapper>
   )
