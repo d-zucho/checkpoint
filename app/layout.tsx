@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={` ${montserrat.variable} ${manrope.variable} antialiased min-h-screen max-w-screen-lg mx-auto bg-background`}
+        className={` ${montserrat.variable} ${manrope.variable} antialiased min-h-screen `}
       >
         <Header />
         {children}

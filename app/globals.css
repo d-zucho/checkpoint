@@ -14,20 +14,25 @@ h6 {
 
 @theme inline {
   --color-heading: #262626;
-  --color-heading-secondary: var(
-    --color-gray-700
-  ); /* #404040 as suggested by AI */
-  --color-text-primary: var(--color-gray-600); /* #525252  as suggested by AI */
-  --color-text-secondary: var(
-    --color-gray-500
-  ); /* #737373  as suggested by AI */
+  --color-heading-secondary: var(--color-gray-700);
+  --color-text-primary: var(--color-gray-600);
+  --color-text-secondary: var(--color-gray-500);
   --color-link: #333333;
   --color-my-primary: var(--color-my-blue-400);
+  /* --color-my-primary: #1e3a5f; */
+  --color-my-primary-hover: var(--color-my-blue-500);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-stats: var(--color-violet-600);
   --font-title: var(--font-montserrat);
   --font-body: var(--font-manrope);
+
+  /* Status Colors */
+  --color-true: #48bb78; /* Green */
+  --color-false: #e53e3e; /* Red */
+  --color-review: #f6ad55; /* Amber */
+  --color-unclear: #805ad5; /* Purple */
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -155,6 +160,58 @@ h6 {
 body {
   font-family: var(--font-manrope);
 }
+.hero h1::after {
+  content: '|';
+  animation: blink 1s infinite;
+  margin-left: 4px;
+  color: var(--color-secondary-foreground);
+}
+.verdict-badge {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: popIn 1s forwards;
+}
+
+.claim-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.claim-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+@theme {
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes popIn {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
 
 /* 
 in tailwind: --gray-300 in hexcode is #d4d4d4
@@ -185,4 +242,59 @@ Exanples of when to use these colors:
 --color-text-primary: #525252; for main body text
 --color-text-secondary: #737373; for secondary text like captions, less important text
 
+*/
+
+.animated-button {
+  position: relative;
+  display: inline-flex;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: var(--color-gray-200);
+
+  font-weight: 600;
+  color: #000;
+  box-shadow: 0 0 0 2px #000200;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-green-600);
+
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+/* 
+<Button className='animated-button'>
+        <span>Learn more</span>
+        <span></span>
+      </Button>
 */

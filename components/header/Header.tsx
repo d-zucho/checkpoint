@@ -9,33 +9,33 @@ import { LogIn } from 'lucide-react'
 
 const Header = () => {
   return (
-    <header className={''}>
+    <header className={'h-[80px]'}>
       <MaxWidthWrapper>
         <div className={'flex justify-between items-center py-5'}>
           {/*Logo*/}
-          <div className='shrink-0'>
-            <Link href='/'>
-              <Image
-                src='/logo.png'
-                width={150}
-                height={100}
-                alt='CheckPoint'
-                className='hidden md:block'
-              />
-
-              <Image
-                src={'/svg/Shield-svg.svg'}
-                width={50}
-                height={100}
-                alt='CheckPoint Logo'
-                className='md:hidden'
-              />
-            </Link>
-          </div>
-
-          {/* Nav Links */}
-          <div className='hidden md:block'>
-            <NavLinks />
+          <div className='flex items-end gap-6'>
+            <div className='shrink-0'>
+              <Link href='/'>
+                <Image
+                  src='/logo.png'
+                  width={150}
+                  height={100}
+                  alt='CheckPoint'
+                  className=''
+                />
+                {/* <Image
+                  src={'/svg/Shield-svg.svg'}
+                  width={50}
+                  height={100}
+                  alt='CheckPoint Logo'
+                  className='md:hidden'
+                /> */}
+              </Link>
+            </div>
+            {/* Nav Links */}
+            <div className='hidden md:block'>
+              <NavLinks />
+            </div>
           </div>
 
           {/* Auth Buttons */}
@@ -43,11 +43,13 @@ const Header = () => {
             <Link
               href={'/'}
               className={`${buttonVariants({
-                variant: 'outline',
-              })} transition-all duration-300 px-6 text-link border-my-blue-500 border-2 hover:shadow-md hover:shadow-my-blue-200 hover:bg-my-blue-500/20 hover:text-link hover:border-transparent`}
+                variant: 'outline2',
+              })} transition-all duration-300 px-6 `}
             >
               Login
+              <span className='hover:shadow-my-blue-200!  absolute inset-0 z-0'></span>
             </Link>
+
             <Button
               variant={'mine'}
               className='text-white px-6 hover:shadow-md transition-all duration-300'

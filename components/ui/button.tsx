@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive px-8",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive px-8 relative",
   {
     variants: {
       variant: {
@@ -14,14 +14,16 @@ const buttonVariants = cva(
           'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
           'border bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 text-my-blue-500 font-bold',
+        outline2:
+          'rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-center text-sm font-semibold text-gray-500 hover:text-gray-700 transition-all hover:bg-gray-100 focus:ring focus:ring-gray-100 disabled:cursor-not-allowed disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-400 shadow-[inset_-2px_-2px_4px_0px_rgba(0,_0,_0,_0.2)]!',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
-        mine: 'px-8 py-2 bg-my-primary rounded-md group hover:cursor-pointer active:shadow-none shadow-[inset_-2px_-4px_6px_2px_rgba(0,_0,_0,_0.2)] relative transition-all duration-800',
+        mine: 'px-8 py-2 bg-my-primary hover:bg-my-primary-hover rounded-md group hover:cursor-pointer active:shadow-none shadow-[inset_-2px_-4px_6px_2px_rgba(0,_0,_0,_0.2)] relative transition-all duration-800',
         white:
-          'bg-white font-semibold text-my-primary shadow-[inset_-2px_-2px_4px_0px_rgba(0,_0,_0,_0.2)]!',
+          'bg-white hover:bg-white/80 font-semibold text-my-primary shadow-[inset_-2px_-2px_4px_0px_rgba(0,_0,_0,_0.2)]! hover:shadow-lg hover:shadow-my-blue-200! border-black/20 hover:border-transparent',
       },
 
       size: {
